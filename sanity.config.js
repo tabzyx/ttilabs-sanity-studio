@@ -6,7 +6,7 @@ export default defineConfig({
   name: 'default',
   title: 'TTI KB',
 
-  projectId: 'tma5c4o6', // 👈 YOUR PROJECT ID
+  projectId: 'tma5c406', // 👈 YOUR PROJECT ID
   dataset: 'production',
 
   plugins: [deskTool()],
