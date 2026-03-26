@@ -11,7 +11,9 @@ export default {
     {
       name: 'slug',
       type: 'slug',
-      options: { source: 'title' },
+      options: {
+      source: 'title',
+      isUnique: (slug, context) => context.defaultIsUnique(slug, context) }
       validation: Rule => Rule.required(),
     },
   ],
