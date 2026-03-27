@@ -62,7 +62,9 @@ export default {
     // 🔹 MEDIA
     {
       name: 'featuredImage',
-      type: 'image',
+      title: 'Featured Image',
+      type: 'reference',
+      to: [{ type: 'media' }]
     },
 
     // 🔹 CONTENT
@@ -73,8 +75,17 @@ export default {
 
     {
       name: 'content',
+      title: 'Content',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        { type: 'block' },
+    
+        // Images inside content
+        {
+          type: 'reference',
+          to: [{ type: 'media' }]
+        }
+      ]
     },
 
     // 🔹 FILE (IMPORTANT FOR WHITEPAPERS)
@@ -82,6 +93,22 @@ export default {
       name: 'file',
       title: 'Attachment (PDF)',
       type: 'file',
+      options: {
+        accept: 'application/pdf'
+      }
+    },
+    {
+      name: 'accessType',
+      title: 'Access Type',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Public Download', value: 'public' },
+          { title: 'Gated (Form Required)', value: 'gated' }
+        ],
+        layout: 'radio'
+      },
+      initialValue: 'public'
     },
 
     // 🔹 SEO
