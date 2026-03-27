@@ -11,4 +11,5 @@ export const schemaTypes = [
   industry,
   author,
   tag,
+  media,
 ]
