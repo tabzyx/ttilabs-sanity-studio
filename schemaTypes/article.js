@@ -25,6 +25,7 @@ export default {
       type: 'string',
       options: {
         list: [
+          { title: 'Industry Insight', value: 'industry-insight' },
           { title: 'Case Study', value: 'case-study' },
           { title: 'Whitepaper', value: 'whitepaper' },
           { title: 'Blog', value: 'blog' },
